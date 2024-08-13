@@ -12,12 +12,15 @@ import videoHover from "../../assets/Navbar_Hover/playHover.png";
 import aboutHover from "../../assets/Navbar_Hover/supportHover.png";
 import contactHover from "../../assets/Navbar_Hover/emailHover.png";
 import hamBurger from "../../assets/more.png";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isHidden, setIsHidden] = useState(true);
+  const location = useLocation();
+  const url = location.pathname;
 
   const items = [
-    { name: "Home", url: home, urlHover: homeHover, href: "/" },
+    { name: "Home", url: home, urlHover: homeHover, href: "/home" },
     {
       name: "Projects",
       url: project,
@@ -48,26 +51,31 @@ const Navbar = () => {
         className={`absolute bg-custom-black h-screen xl:flex 
                      ${
                        !isHidden ? "flex" : "hidden"
-                     } items-center flex-col w-3/6 lg:w-3/12 xl:3/6 xl:relative z-30 `}
+                     }  flex-col pl-12 w-3/6 lg:w-3/12 xl:3/6 xl:relative z-30 `}
       >
-        <div className="w-56 flex flex-col justify-center items-center">
-          <img className="w-32 rounded-full mt-32" src={profileImage} alt="" />
+        <div className="flex flex-col ">
+          <img className="w-32 rounded-full mt-10" src={profileImage} alt="" />
           <h1 className="font-outfit text-1.4rem text-custom-white mt-4 font-bold">
             Muhammad Abuzar
           </h1>
           <h4 className="font-outfit text-custom-grey">Web Developer</h4>
         </div>
-        <div className="w-56">
-          <ol className="text-blue-50 mt-20 w-28 flex flex-col items-start">
+        <div className=" flex items-start w-full">
+          <ol className="text-blue-50 mt-12 flex flex-col w-full">
             {items.map((item, index) => (
               <li
-                className="flex items-center justify-center mt-8 font-outfit text-custom-white hover:text-custom-blue transition duration-400 ease transform hover:translate-x-2 text-xl font-medium"
+                className={`flex items-center w-full mt-6 font-outfit ${
+                  url.includes(item.href)
+                    ? ""
+                    : " text-custom-white hover:text-custom-blue transition duration-200 ease transform hover:translate-x-2"
+                } text-xl font-medium`}
                 key={index}
               >
                 <Item
                   itemName={item.name}
                   itemImg={item.url}
                   itemHoverImg={item.urlHover}
+                  url={url}
                   hrefLink={item.href}
                 />
               </li>

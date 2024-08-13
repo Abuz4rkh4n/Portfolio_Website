@@ -11,7 +11,7 @@ export default {
         "dark-grey": "#333333",
         "custom-blue": "#40a4ff",
         "custom-shade": "#00FFFF",
-        "black-background": "#1C1C1C",
+        "black-background": "#282828",
       },
       fontSize: {
         "1.4rem": "1.4rem",

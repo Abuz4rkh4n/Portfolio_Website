@@ -9,7 +9,7 @@ const App = () => {
     <div className="flex">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/home" element={<Main />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </div>

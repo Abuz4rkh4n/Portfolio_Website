@@ -6,12 +6,14 @@ import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="flex">
+    <div className="flex h-screen overflow-hidden">
       <Navbar />
-      <Routes>
-        <Route path="/home" element={<Main />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+      <div className=" overflow-y-scroll w-full bg-black-background">
+        <Routes>
+          <Route path="/home" element={<Main />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </div>
     </div>
   );
 };

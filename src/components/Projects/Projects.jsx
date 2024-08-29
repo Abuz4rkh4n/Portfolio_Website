@@ -38,7 +38,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="bg-black-background w-full flex flex-col items-center h-screen overflow-scroll overflow-x-hidden">
+    <div className="bg-black-background w-full flex flex-col items-center h-screen">
       <div className="flex flex-col w-11/12 mt-24">
         <h1 className="font-outfit text-custom-white text-2.5rem">
           All Projects

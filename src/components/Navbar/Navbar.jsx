@@ -36,7 +36,11 @@ const Navbar = () => {
     <>
       <div className="fixed top-0 bg-custom-black z-40 flex items-center justify-between w-full p-5 xl:hidden shadow-header">
         <a className="flex items-center cursor-pointer">
-          <img src={profileImage} className="w-12 rounded-full" alt="Profile" />
+          <img
+            src={profileImage}
+            className="w-12 rounded-full "
+            alt="Profile"
+          />
           <h1 className=" text-custom-white font-outfit ml-2">Portfolio</h1>
         </a>
         <button
@@ -53,14 +57,14 @@ const Navbar = () => {
                        !isHidden ? "flex" : "hidden"
                      }  flex-col pl-12 w-3/6 lg:w-3/12 xl:3/6 xl:relative z-30 `}
       >
-        <div className="flex flex-col ">
-          <img className="w-32 rounded-full mt-10" src={profileImage} alt="" />
+        <div className=" flex-col hidden xl:flex">
+          <img className="w-32 rounded-full mt-10 " src={profileImage} alt="" />
           <h1 className="font-outfit text-1.4rem text-custom-white mt-4 font-bold">
             Muhammad Abuzar
           </h1>
           <h4 className="font-outfit text-custom-grey">Web Developer</h4>
         </div>
-        <div className=" flex items-start w-full">
+        <div className=" flex items-start w-full mt-32 xl:mt-0">
           <ol className="text-blue-50 mt-12 flex flex-col w-full">
             {items.map((item, index) => (
               <li

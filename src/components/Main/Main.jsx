@@ -5,8 +5,8 @@ import next from "../../assets/next.png";
 const Main = () => {
   return (
     <div className=" w-full flex flex-col items-center justify-center">
-      <div className="flex items-center justify-between w-11/12 3xl:w-inherit">
-        <h1 className="text-custom-white text-1.6rem xl:text-2.5rem font-outfit mt-12">
+      <div className="flex items-center justify-between w-11/12 3xl:w-inherit my-12">
+        <h1 className="text-custom-white text-1.6rem xl:text-2.5rem font-outfit">
           Web Developer and Designer
         </h1>
         <a href="#" className="flex items-center justify-center ">

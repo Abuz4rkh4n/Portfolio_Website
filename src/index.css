@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scrollImage {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.scroll-image {
+  transition: transform 0.3s ease;
+  animation: scrollImage 20s linear infinite;
+}
